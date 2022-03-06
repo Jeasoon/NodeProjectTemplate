@@ -1,4 +1,4 @@
-import {window, document} from 'browser'
+const canvas = <HTMLCanvasElement> document.getElementById("myCanvas")
+const ctx = canvas.getContext('2d')
 
-console.log("window: ", window)
-console.log("document: ", document)
+console.log(ctx)

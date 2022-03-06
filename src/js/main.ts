@@ -1,3 +1,4 @@
-const hello: String = "hello world"
+import {window, document} from 'browser'
 
-console.log(hello)
+console.log("window: ", window)
+console.log("document: ", document)

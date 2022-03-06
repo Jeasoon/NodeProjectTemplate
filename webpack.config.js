@@ -5,13 +5,13 @@ module.exports = {
     mode: "production",
     entry: "./src/js/main.ts",
     output: {
-        filename: "bundle.js",
+        filename: "js/bundle.js",
         path: path.resolve(__dirname, "dist")
     },
     module: {
         rules: [
             {
-                test: /\.tsc?$/,
+                test: /\.tsx?$/,
                 use: "ts-loader",
                 exclude: /node_modules/
             },
@@ -24,7 +24,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/template/index.html"
+            template: "./src/template/index.html",
+            favicon: "./src/public/favicon.ico"
         })
     ],
     resolve: {
